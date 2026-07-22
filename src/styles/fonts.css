@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=JetBrains+Mono:wght@400;700&family=Lora:wght@400&family=Manrope:wght@400;600;700;800&display=swap');
+
+/* Map Figma-generated font class names to actual loaded web fonts */
+
+.font-\[\'Barlow_Condensed\:Black\'\,sans-serif\] {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900;
+}
+
+.font-\[\'Barlow_Condensed\:Bold\'\,sans-serif\] {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700;
+}
+
+.font-\[\'Lora\:Regular\'\,sans-serif\] {
+  font-family: 'Lora', serif !important;
+  font-weight: 400;
+}
+
+.font-\[\'Manrope\:Regular\'\,sans-serif\] {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 400;
+}
+
+.font-\[\'Manrope\:Bold\'\,sans-serif\] {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 700;
+}
+
+.font-\[\'Manrope\:ExtraBold\'\,sans-serif\] {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 800;
+}
+
+.font-\[\'JetBrains_Mono\:Regular\'\,sans-serif\] {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-weight: 400;
+}
+
+.font-\[\'JetBrains_Mono\:Bold\'\,sans-serif\] {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-weight: 700;
+}
+
+.font-\[\'Manrope\:SemiBold\'\,sans-serif\] {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 600;
+}
