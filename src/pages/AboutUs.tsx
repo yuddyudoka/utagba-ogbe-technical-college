@@ -3,12 +3,12 @@ import { Link } from "react-router";
 import svgPaths from "@/imports/AboutUs/svg-hnaspw36n6";
 import imgHero from "@/imports/AboutUs/78106b2658bf5182cf323d2b805b4b2520a8d4e9.png";
 import imgVision from "@/imports/AboutUs/577aec8b0d80f09397ee0109b8dfce02103623c2.png";
-import imgAutomotive from "@/imports/AboutUs/ce512f4db09e6c5df524fb09efb0556b3f5e4e8b.png";
-import imgElectrical from "@/imports/AboutUs/fda2d64a71fb05e36cd50074bb8508a5437c29c0.png";
-import imgWelding from "@/imports/AboutUs/171e3ab87ed18d22622c9d7bf98bdedefef568c9.png";
-import imgConstruction from "@/imports/AboutUs/f24223f7185837f78a0265a0b6d6ee3401817a78.png";
-import imgWoodwork from "@/imports/AboutUs/755a165808a8e65bfa1d868e26650bc7aaa2c43a.png";
-import imgHvac from "@/imports/AboutUs/73894e559342300320b620612d3e1c0e7033c273.png";
+import imgAutomotive from "@/assets/programmes/motor-vehicle.jpg";
+import imgElectrical from "@/assets/programmes/electrical-installation.jpg";
+import imgWelding from "@/assets/programmes/fabrication-welding.jpg";
+import imgConstruction from "@/assets/programmes/bricklaying-concreting.jpg";
+import imgWoodwork from "@/assets/programmes/furniture-making.jpg";
+import imgHvac from "@/assets/programmes/air-conditioning.jpg";
 
 const coreValues = [
   {

@@ -1,15 +1,15 @@
-import imgMotorVehicle from "@/imports/CoursesCms/ce512f4db09e6c5df524fb09efb0556b3f5e4e8b.png";
-import imgElectrical from "@/imports/CoursesCms/31b6ec6d00bcb0f4de7f0189f96fe29bfeee3c95.png";
-import imgFabrication from "@/imports/CoursesCms/171e3ab87ed18d22622c9d7bf98bdedefef568c9.png";
-import imgMechanical from "@/imports/CoursesCms/c13b2401800d8dff90bdaa4c746c338a1dcd9991.png";
-import imgPlumbing from "@/imports/CoursesCms/c13b2401800d8dff90bdaa4c746c338a1dcd9991.png";
-import imgBricklaying from "@/imports/CoursesCms/f24223f7185837f78a0265a0b6d6ee3401817a78.png";
-import imgFurniture from "@/imports/CoursesCms/9790c6a79f5d120f39c8def0ed5a46be77058688.png";
-import imgCarpentry from "@/imports/CoursesCms/755a165808a8e65bfa1d868e26650bc7aaa2c43a.png";
-import imgAirCon from "@/imports/CoursesCms/73894e559342300320b620612d3e1c0e7033c273.png";
-import imgTiling from "@/imports/CoursesCms/1607bfd19c5cdd879f219d4248b4c1cb479ac726.png";
-import imgPainting from "@/imports/CoursesCms/9c8174c2252eb1e4a5a4b386ecb6933e3e176f1f.png";
-import imgBusiness from "@/imports/CoursesCms/37de75db249bec4c1c524f2e747f6143f539ec1b.png";
+import imgMotorVehicle from "@/assets/programmes/motor-vehicle.jpg";
+import imgElectrical from "@/assets/programmes/electrical-installation.jpg";
+import imgFabrication from "@/assets/programmes/fabrication-welding.jpg";
+import imgMechanical from "@/assets/programmes/mechanical-craft-practice.jpg";
+import imgPlumbing from "@/assets/programmes/plumbing-pipefitting.jpg";
+import imgBricklaying from "@/assets/programmes/bricklaying-concreting.jpg";
+import imgFurniture from "@/assets/programmes/furniture-making.jpg";
+import imgCarpentry from "@/assets/programmes/carpentry-joinery.jpg";
+import imgAirCon from "@/assets/programmes/air-conditioning.jpg";
+import imgTiling from "@/assets/programmes/tiling-interlocking.jpg";
+import imgPainting from "@/assets/programmes/painting-decoration.jpg";
+import imgBusiness from "@/assets/programmes/business-studies.jpg";
 
 export interface Programme {
   n: string;
@@ -344,5 +344,16 @@ export function getProgrammeBySlug(slug: string): Programme | undefined {
 }
 
 export function getOtherProgrammes(slug: string, count = 3): Programme[] {
-  return programmes.filter((p) => p.slug !== slug).slice(0, count);
+  const currentIndex = programmes.findIndex((programme) => programme.slug === slug);
+
+  if (currentIndex === -1) {
+    return programmes.slice(0, count);
+  }
+
+  const resultCount = Math.min(count, programmes.length - 1);
+
+  return Array.from(
+    { length: resultCount },
+    (_, offset) => programmes[(currentIndex + offset + 1) % programmes.length],
+  );
 }

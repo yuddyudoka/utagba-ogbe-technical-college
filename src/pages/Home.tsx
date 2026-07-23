@@ -3,12 +3,12 @@ import { Link } from "react-router";
 import svgPaths from "@/imports/Home/svg-3h2es2zdcj";
 import imgHero from "@/imports/Home/44dd83f8fdd17433468eac6424c5e0d628aaf222.png";
 import imgAbout from "@/imports/Home/577d0d5f8077b76a00b284a73c4a092097a8086f.png";
-import imgMotorVehicle from "@/imports/Home/ce512f4db09e6c5df524fb09efb0556b3f5e4e8b.png";
-import imgElectrical from "@/imports/Home/fda2d64a71fb05e36cd50074bb8508a5437c29c0.png";
-import imgWelding from "@/imports/Home/171e3ab87ed18d22622c9d7bf98bdedefef568c9.png";
-import imgMechanical from "@/imports/Home/f24223f7185837f78a0265a0b6d6ee3401817a78.png";
-import imgPlumbing from "@/imports/Home/755a165808a8e65bfa1d868e26650bc7aaa2c43a.png";
-import imgBricklaying from "@/imports/Home/73894e559342300320b620612d3e1c0e7033c273.png";
+import imgMotorVehicle from "@/assets/programmes/motor-vehicle.jpg";
+import imgElectrical from "@/assets/programmes/electrical-installation.jpg";
+import imgWelding from "@/assets/programmes/fabrication-welding.jpg";
+import imgMechanical from "@/assets/programmes/mechanical-craft-practice.jpg";
+import imgPlumbing from "@/assets/programmes/plumbing-pipefitting.jpg";
+import imgBricklaying from "@/assets/programmes/bricklaying-concreting.jpg";
 
 const courses = [
   { img: imgMotorVehicle, title: "Motor Vehicle Mechanic Works", desc: "Comprehensive training in automotive repair, maintenance, and diagnostics.", slug: "motor-vehicle-mechanic-works" },
