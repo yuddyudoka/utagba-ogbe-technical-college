@@ -122,7 +122,7 @@ export default function ContactUs() {
           <img
             src={imgHero}
             alt="Utagba-Ogbe Technical College campus"
-            className="w-full h-full object-cover object-[center_88%]"
+            className="w-full h-full object-cover object-[center_10%]"
           />
           <div className="absolute inset-0 bg-black/60" />
         </div>
