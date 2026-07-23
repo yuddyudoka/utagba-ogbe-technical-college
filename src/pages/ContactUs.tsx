@@ -83,6 +83,7 @@ export default function ContactUs() {
     email: "",
     subject: "",
     message: "",
+    website: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -93,23 +94,16 @@ export default function ContactUs() {
     setSubmitting(true);
     setSubmitError("");
 
-    const body = new URLSearchParams({
-      "form-name": "contact",
-      name: form.name,
-      email: form.email,
-      subject: form.subject,
-      message: form.message,
-    });
-
     try {
-      const response = await fetch("/", {
+      const response = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: body.toString(),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
       });
 
       if (!response.ok) {
-        throw new Error(`Form submission failed with status ${response.status}`);
+        const result = await response.json().catch(() => null);
+        throw new Error(result?.error || "Form submission failed.");
       }
 
       setSubmitted(true);
@@ -130,7 +124,7 @@ export default function ContactUs() {
             alt="Utagba-Ogbe Technical College campus"
             className="w-full h-full object-cover object-[center_88%]"
           />
-          <div className="absolute inset-0 bg-black/75" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative max-w-[1280px] mx-auto px-5 md:px-10 h-full flex flex-col justify-end pb-10 md:pb-12">
           <p className="font-['JetBrains_Mono:Regular',sans-serif] text-[#f4b224] text-sm tracking-[1.2px] uppercase mb-2">
@@ -210,7 +204,7 @@ export default function ContactUs() {
                     </p>
                     <button
                       type="button"
-                      onClick={() => { setSubmitted(false); setForm({ name: "", email: "", subject: "", message: "" }); }}
+                      onClick={() => { setSubmitted(false); setForm({ name: "", email: "", subject: "", message: "", website: "" }); }}
                       className="mt-2 font-['Manrope:SemiBold',sans-serif] font-semibold text-sm text-[#f4b224] hover:underline"
                     >
                       Send another message
@@ -218,13 +212,21 @@ export default function ContactUs() {
                   </div>
                 ) : (
                   <form
-                    name="contact"
-                    method="POST"
-                    data-netlify="true"
                     onSubmit={handleSubmit}
                     className="mt-6 flex flex-col gap-5"
                   >
-                    <input type="hidden" name="form-name" value="contact" />
+                    <div className="absolute -left-[10000px] h-px w-px overflow-hidden" aria-hidden="true">
+                      <label htmlFor="contact-website">Website</label>
+                      <input
+                        id="contact-website"
+                        name="website"
+                        type="text"
+                        tabIndex={-1}
+                        autoComplete="off"
+                        value={form.website}
+                        onChange={(e) => setForm((f) => ({ ...f, website: e.target.value }))}
+                      />
+                    </div>
                     {/* Name + Email row */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>

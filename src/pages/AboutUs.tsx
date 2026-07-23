@@ -80,7 +80,7 @@ export default function AboutUs() {
       <section className="relative w-full h-[360px] md:h-[400px]">
         <div className="absolute inset-0">
           <img src={imgHero} alt="About Utagba-Ogbe Technical College" className="w-full h-full object-cover object-[center_20%]" />
-          <div className="absolute inset-0 bg-black/80" />
+          <div className="absolute inset-0 bg-black/65" />
         </div>
         <div className="relative max-w-[1280px] mx-auto px-5 md:px-10 h-full flex flex-col justify-end pb-10 md:pb-12">
           <SectionLabel text="About Us" dark />

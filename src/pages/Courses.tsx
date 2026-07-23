@@ -51,7 +51,7 @@ export default function Courses() {
             alt="Utagba-Ogbe Technical College programmes"
             className="w-full h-full object-cover object-[center_40%]"
           />
-          <div className="absolute inset-0 bg-black/80" />
+          <div className="absolute inset-0 bg-black/65" />
         </div>
         <div className="relative max-w-[1280px] mx-auto px-5 md:px-10 h-full flex flex-col justify-end pb-10 md:pb-12">
           <div className="flex items-center gap-3 mb-3">

@@ -118,7 +118,7 @@ export default function Admissions() {
       <section className="relative w-full h-[360px] md:h-[400px]">
         <div className="absolute inset-0">
           <img src={imgHero} alt="Utagba-Ogbe Technical College campus" className="w-full h-full object-cover object-[center_40%]" />
-          <div className="absolute inset-0 bg-black/80" />
+          <div className="absolute inset-0 bg-black/65" />
         </div>
         <div className="relative max-w-[1280px] mx-auto px-5 md:px-10 h-full flex flex-col justify-end pb-10 md:pb-12">
           <h1

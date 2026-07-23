@@ -33,7 +33,7 @@ export default function Home() {
       <section className="relative w-full min-h-[540px] md:min-h-[620px] lg:min-h-[680px]">
         <div className="absolute inset-0">
           <img src={imgHero} alt="Welding sparks in a technical workshop" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-black/55" />
         </div>
         <div className="relative max-w-[1280px] mx-auto px-5 md:px-10 pt-36 pb-16 md:pt-44 md:pb-20 lg:pt-[149px] lg:pb-24">
           <div className="max-w-2xl">

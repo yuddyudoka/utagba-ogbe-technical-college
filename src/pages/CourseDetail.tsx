@@ -81,7 +81,7 @@ export default function CourseDetail() {
             alt={programme.title}
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-black/80" />
+          <div className="absolute inset-0 bg-black/65" />
         </div>
         <div className="relative max-w-[1280px] mx-auto px-5 md:px-10 h-full flex flex-col justify-end pb-10 md:pb-12">
           <h1
