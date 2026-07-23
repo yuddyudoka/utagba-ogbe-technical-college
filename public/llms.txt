@@ -1,0 +1,30 @@
+# Utagba-Ogbe Technical College
+
+Utagba-Ogbe Technical College provides practical, career-focused technical education in Utagba-Ogbe, Delta State, Nigeria.
+
+## Main pages
+
+- [Home](https://utagbatechnicalcollege.com.ng/): College overview, programmes and admissions information.
+- [About](https://utagbatechnicalcollege.com.ng/about): History, mission, values and training infrastructure.
+- [Courses](https://utagbatechnicalcollege.com.ng/courses): Available NTC and NBC technical programmes.
+- [Admissions](https://utagbatechnicalcollege.com.ng/admissions): Admission requirements and application guidance.
+- [Contact](https://utagbatechnicalcollege.com.ng/contact): Contact details and enquiry form.
+
+## Programme information
+
+- [Motor Vehicle Mechanic Works](https://utagbatechnicalcollege.com.ng/courses/motor-vehicle-mechanic-works)
+- [Electrical Maintenance and Installation](https://utagbatechnicalcollege.com.ng/courses/electrical-maintenance-installation)
+- [Fabrication and Welding](https://utagbatechnicalcollege.com.ng/courses/fabrication-and-welding)
+- [Mechanical Engineering and Craft Practice](https://utagbatechnicalcollege.com.ng/courses/mechanical-engineering-craft-practice)
+- [Plumbing and Pipefitting](https://utagbatechnicalcollege.com.ng/courses/plumbing-and-pipefitting)
+- [Bricklaying, Blocklaying and Concreting](https://utagbatechnicalcollege.com.ng/courses/bricklaying-blocklaying-concreting)
+- [Furniture Making](https://utagbatechnicalcollege.com.ng/courses/furniture-making)
+- [Carpentry and Joinery](https://utagbatechnicalcollege.com.ng/courses/carpentry-and-joinery)
+- [Air Conditioning and Refrigeration](https://utagbatechnicalcollege.com.ng/courses/air-conditioning-refrigeration)
+- [Tiling and Interlocking](https://utagbatechnicalcollege.com.ng/courses/tiling-interlocking)
+- [Painting and Decorations](https://utagbatechnicalcollege.com.ng/courses/painting-and-decorations)
+- [NBC Business Studies](https://utagbatechnicalcollege.com.ng/courses/nbc-business-studies)
+
+## Discovery
+
+- [XML sitemap](https://utagbatechnicalcollege.com.ng/sitemap.xml)

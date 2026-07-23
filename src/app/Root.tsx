@@ -8,7 +8,9 @@ export default function Root() {
     <div className="w-full bg-white">
       <ScrollToTop />
       <Navbar />
-      <Outlet />
+      <main id="main-content">
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );
