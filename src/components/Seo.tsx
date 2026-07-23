@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const SITE_NAME = "Utagba-Ogbe Technical College";
 const SITE_URL = "https://utagbatechnicalcollege.com.ng";
-const SOCIAL_IMAGE = `${SITE_URL}/social-banner.png`;
+const SOCIAL_IMAGE = `${SITE_URL}/social-banner-v2.png`;
 
 interface SeoProps {
   title: string;
