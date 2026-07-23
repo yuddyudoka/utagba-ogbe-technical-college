@@ -93,8 +93,8 @@ export default function Home() {
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-px bg-[#f4b224] shrink-0" />
-                <p className="font-['JetBrains_Mono:Regular',sans-serif] text-[#f4b224] text-sm tracking-[1.2px] uppercase">About the College</p>
+                <div className="w-8 h-px bg-black shrink-0" />
+                <p className="font-['JetBrains_Mono:Regular',sans-serif] text-black text-sm tracking-[1.2px] uppercase">About the College</p>
               </div>
               <h2 className="font-['Barlow_Condensed:Black',sans-serif] not-italic text-[#0c0c0c] leading-tight mt-2 md:mt-5" style={{ fontSize: "clamp(1.75rem, 3.5vw, 44px)" }}>
                 CENTRE OF EXCELLENCE IN TECHNICAL EDUCATION
