@@ -1,6 +1,10 @@
 import { useParams, Link, Navigate } from "react-router";
 import svgPaths from "@/imports/CourseDetailCmsPage/svg-by5if6doaf";
-import { getProgrammeBySlug, getOtherProgrammes } from "@/data/programmes";
+import {
+  findOtherProgrammes,
+  findProgramme,
+  useProgrammes,
+} from "@/data/useProgrammes";
 
 // ── SVG icons ──────────────────────────────────────────────────
 
@@ -66,8 +70,9 @@ function SectionHeading({ icon, label }: { icon: React.ReactNode; label: string 
 
 export default function CourseDetail() {
   const { slug } = useParams<{ slug: string }>();
-  const programme = getProgrammeBySlug(slug ?? "");
-  const others = getOtherProgrammes(slug ?? "");
+  const programmes = useProgrammes();
+  const programme = findProgramme(programmes, slug ?? "");
+  const others = findOtherProgrammes(programmes, slug ?? "");
 
   if (!programme) return <Navigate to="/courses" replace />;
 

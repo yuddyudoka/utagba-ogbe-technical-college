@@ -1,9 +1,10 @@
 import { Link } from "react-router";
-import { programmes } from "@/data/programmes";
+import type { Programme } from "@/data/programmes";
+import { useProgrammes } from "@/data/useProgrammes";
 
 import imgHero from "@/imports/CoursesCms/4a250bdb60cd274b8da4e5f250fde020f958cec5.png";
 
-function ProgrammeCard({ programme }: { programme: typeof programmes[number] }) {
+function ProgrammeCard({ programme }: { programme: Programme }) {
   return (
     <Link to={`/courses/${programme.slug}`} className="bg-white flex flex-col overflow-hidden border border-black/10 hover:border-black/20 transition-colors group">
       {/* Image */}
@@ -41,6 +42,8 @@ function ProgrammeCard({ programme }: { programme: typeof programmes[number] }) 
 }
 
 export default function Courses() {
+  const programmes = useProgrammes();
+
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────── */}

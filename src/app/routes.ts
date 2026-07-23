@@ -6,8 +6,10 @@ import Admissions from "@/pages/Admissions";
 import ContactUs from "@/pages/ContactUs";
 import Courses from "@/pages/Courses";
 import CourseDetail from "@/pages/CourseDetail";
+import Admin from "@/pages/Admin";
 
 export const router = createBrowserRouter([
+  { path: "/admin", Component: Admin },
   {
     path: "/",
     Component: Root,
