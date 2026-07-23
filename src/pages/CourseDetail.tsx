@@ -5,6 +5,7 @@ import {
   findProgramme,
   useProgrammes,
 } from "@/data/useProgrammes";
+import Seo from "@/components/Seo";
 
 // ── SVG icons ──────────────────────────────────────────────────
 
@@ -78,6 +79,22 @@ export default function CourseDetail() {
 
   return (
     <>
+      <Seo
+        title={programme.title}
+        description={`${programme.overview.slice(0, 150).trim()}${programme.overview.length > 150 ? "…" : ""}`}
+        path={`/courses/${programme.slug}`}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Course",
+          name: programme.title,
+          description: programme.overview,
+          provider: {
+            "@type": "EducationalOrganization",
+            name: "Utagba-Ogbe Technical College",
+            url: "https://utagbatechnicalcollege.com.ng",
+          },
+        }}
+      />
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative w-full h-[360px] md:h-[400px]">
         <div className="absolute inset-0">

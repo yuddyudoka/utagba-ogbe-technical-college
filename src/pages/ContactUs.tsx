@@ -1,6 +1,7 @@
 import { useState } from "react";
 import svgPaths from "@/imports/ContactUs/svg-7t9vx8mts6";
 import imgHero from "@/imports/ContactUs/172d47cb03cba258953b2f2a9a2b7413370dea9c.png";
+import Seo from "@/components/Seo";
 
 function LocationIcon() {
   return (
@@ -116,12 +117,17 @@ export default function ContactUs() {
 
   return (
     <>
+      <Seo
+        title="Contact Us"
+        description="Contact Utagba-Ogbe Technical College for admissions, programme enquiries, campus visits and general information."
+        path="/contact"
+      />
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative w-full h-[360px] md:h-[400px]">
         <div className="absolute inset-0">
           <img
             src={imgHero}
-            alt="Utagba-Ogbe Technical College campus"
+            alt="Utagba-Ogbe Technical College students and staff"
             className="w-full h-full object-cover object-[center_10%]"
           />
           <div className="absolute inset-0 bg-black/60" />

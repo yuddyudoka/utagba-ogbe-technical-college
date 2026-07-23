@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Check, ImagePlus, LogOut, Save } from "lucide-react";
 import { programmes as fallbackProgrammes, type Programme } from "@/data/programmes";
+import Seo from "@/components/Seo";
 
 type Notice = { type: "success" | "error"; message: string } | null;
 
@@ -38,7 +39,14 @@ function Login({ onSuccess }: { onSuccess: () => void }) {
   }
 
   return (
-    <main className="min-h-screen bg-[#f3f1eb] px-5 py-12 flex items-center justify-center">
+    <>
+      <Seo
+        title="Programme Admin"
+        description="Protected programme content management for Utagba-Ogbe Technical College."
+        path="/admin"
+        noIndex
+      />
+      <main className="min-h-screen bg-[#f3f1eb] px-5 py-12 flex items-center justify-center">
       <section className="w-full max-w-[420px] border border-black/10 bg-[#fbfaf7] p-7 sm:p-9">
         <div className="mb-8">
           <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#a66f00]">
@@ -73,7 +81,8 @@ function Login({ onSuccess }: { onSuccess: () => void }) {
           </button>
         </form>
       </section>
-    </main>
+      </main>
+    </>
   );
 }
 
@@ -182,7 +191,17 @@ export default function Admin() {
   }
 
   if (checking) {
-    return <main className="min-h-screen bg-[#f3f1eb] grid place-items-center text-sm text-[#666]">Loading admin...</main>;
+    return (
+      <>
+        <Seo
+          title="Programme Admin"
+          description="Protected programme content management for Utagba-Ogbe Technical College."
+          path="/admin"
+          noIndex
+        />
+        <main className="min-h-screen bg-[#f3f1eb] grid place-items-center text-sm text-[#666]">Loading admin...</main>
+      </>
+    );
   }
   if (!authenticated) {
     return <Login onSuccess={async () => { setAuthenticated(true); await loadProgrammes(); }} />;
@@ -190,6 +209,12 @@ export default function Admin() {
 
   return (
     <main className="min-h-screen bg-[#f3f1eb] text-[#171717]">
+      <Seo
+        title="Programme Admin"
+        description="Protected programme content management for Utagba-Ogbe Technical College."
+        path="/admin"
+        noIndex
+      />
       <header className="border-b border-black/10 bg-[#171717] text-white">
         <div className="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-4 md:px-8">
           <div>
@@ -258,7 +283,11 @@ export default function Admin() {
                 <div>
                   <span className={labelClass}>Programme image</span>
                   <div className="grid gap-4 sm:grid-cols-[220px_1fr] sm:items-center">
-                    <img src={selected.img} alt="" className="h-[130px] w-full object-cover" />
+                    <img
+                      src={selected.img}
+                      alt={`Current programme image for ${selected.title}`}
+                      className="h-[130px] w-full object-cover"
+                    />
                     <div>
                       <label className="inline-flex cursor-pointer items-center gap-2 border border-black/20 bg-white px-4 py-2.5 text-sm font-bold hover:border-black/40">
                         <ImagePlus size={17} />

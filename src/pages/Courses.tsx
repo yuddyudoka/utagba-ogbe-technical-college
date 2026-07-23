@@ -3,6 +3,7 @@ import type { Programme } from "@/data/programmes";
 import { useProgrammes } from "@/data/useProgrammes";
 
 import imgHero from "@/imports/CoursesCms/4a250bdb60cd274b8da4e5f250fde020f958cec5.png";
+import Seo from "@/components/Seo";
 
 function ProgrammeCard({ programme }: { programme: Programme }) {
   return (
@@ -46,6 +47,11 @@ export default function Courses() {
 
   return (
     <>
+      <Seo
+        title="Technical Courses and Programmes"
+        description="Explore practical NTC and NBC programmes at Utagba-Ogbe Technical College, from automotive and electrical trades to construction and business."
+        path="/courses"
+      />
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative w-full h-[360px] md:h-[400px]">
         <div className="absolute inset-0">

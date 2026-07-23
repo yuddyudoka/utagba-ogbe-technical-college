@@ -1,6 +1,7 @@
 import svgPaths from "@/imports/Admissions/svg-pz736fpu46";
 import imgHero from "@/imports/Admissions/6a8f3b86589fd4bfa8c0530f1197bd1ffb973626.png";
 import { Link } from "react-router";
+import Seo from "@/components/Seo";
 
 // ── Step icon wrapper ────────────────────────────────────────
 function StepIcon({ children }: { children: React.ReactNode }) {
@@ -114,6 +115,11 @@ const requirements = [
 export default function Admissions() {
   return (
     <>
+      <Seo
+        title="Admissions"
+        description="Find admission requirements and application guidance for practical technical programmes at Utagba-Ogbe Technical College."
+        path="/admissions"
+      />
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative w-full h-[360px] md:h-[400px]">
         <div className="absolute inset-0">

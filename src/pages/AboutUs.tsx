@@ -9,6 +9,7 @@ import imgWelding from "@/assets/programmes/fabrication-welding.jpg";
 import imgConstruction from "@/assets/programmes/bricklaying-concreting.jpg";
 import imgWoodwork from "@/assets/programmes/furniture-making.jpg";
 import imgHvac from "@/assets/programmes/air-conditioning.jpg";
+import Seo from "@/components/Seo";
 
 const coreValues = [
   {
@@ -76,6 +77,11 @@ function SectionLabel({ text, dark = false }: { text: string; dark?: boolean }) 
 export default function AboutUs() {
   return (
     <>
+      <Seo
+        title="About Us"
+        description="Learn about Utagba-Ogbe Technical College, our mission, history, facilities and commitment to practical technical education in Delta State."
+        path="/about"
+      />
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative w-full h-[360px] md:h-[400px]">
         <div className="absolute inset-0">

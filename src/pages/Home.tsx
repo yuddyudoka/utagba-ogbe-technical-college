@@ -9,6 +9,7 @@ import imgWelding from "@/assets/programmes/fabrication-welding.jpg";
 import imgMechanical from "@/assets/programmes/mechanical-craft-practice.jpg";
 import imgPlumbing from "@/assets/programmes/plumbing-pipefitting.jpg";
 import imgBricklaying from "@/assets/programmes/bricklaying-concreting.jpg";
+import Seo from "@/components/Seo";
 
 const courses = [
   { img: imgMotorVehicle, title: "Motor Vehicle Mechanic Works", desc: "Comprehensive training in automotive repair, maintenance, and diagnostics.", slug: "motor-vehicle-mechanic-works" },
@@ -29,6 +30,29 @@ const stats = [
 export default function Home() {
   return (
     <>
+      <Seo
+        title="Utagba-Ogbe Technical College | Practical Technical Education"
+        description="Build practical, career-ready skills at Utagba-Ogbe Technical College through accredited NTC and NBC technical programmes."
+        path="/"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              name: "Utagba-Ogbe Technical College",
+              alternateName: "Utagba-Ogbe Tech",
+              url: "https://utagbatechnicalcollege.com.ng",
+            },
+            {
+              "@type": "EducationalOrganization",
+              name: "Utagba-Ogbe Technical College",
+              url: "https://utagbatechnicalcollege.com.ng",
+              logo: "https://utagbatechnicalcollege.com.ng/favicon.png",
+              description: "A technical college providing practical, career-ready NTC and NBC education in Utagba-Ogbe, Delta State, Nigeria.",
+            },
+          ],
+        }}
+      />
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative w-full min-h-[540px] md:min-h-[620px] lg:min-h-[680px]">
         <div className="absolute inset-0">
