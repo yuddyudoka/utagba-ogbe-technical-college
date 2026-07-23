@@ -75,9 +75,12 @@ export default function Navbar() {
             APPLY NOW
           </Link>
           <button
+            type="button"
             onClick={() => setMenuOpen(!menuOpen)}
             className={`lg:hidden p-1 ${iconColor}`}
             aria-label="Toggle navigation menu"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
           >
             {menuOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
@@ -86,7 +89,7 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className={`lg:hidden px-5 py-6 flex flex-col ${menuBg}`}>
+        <div id="mobile-navigation" className={`lg:hidden px-5 py-6 flex flex-col ${menuBg}`}>
           {navItems.map((item) => {
             const isActive = pathname === item.path;
             return (

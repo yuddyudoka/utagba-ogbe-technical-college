@@ -85,10 +85,39 @@ export default function ContactUs() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setSubmitError("");
+
+    const body = new URLSearchParams({
+      "form-name": "contact",
+      name: form.name,
+      email: form.email,
+      subject: form.subject,
+      message: form.message,
+    });
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body.toString(),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Form submission failed with status ${response.status}`);
+      }
+
+      setSubmitted(true);
+    } catch {
+      setSubmitError("Your message could not be sent. Please try again or email the college directly.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -180,6 +209,7 @@ export default function ContactUs() {
                       Thank you for reaching out. We{"'"}ll get back to you as soon as possible.
                     </p>
                     <button
+                      type="button"
                       onClick={() => { setSubmitted(false); setForm({ name: "", email: "", subject: "", message: "" }); }}
                       className="mt-2 font-['Manrope:SemiBold',sans-serif] font-semibold text-sm text-[#f4b224] hover:underline"
                     >
@@ -187,15 +217,25 @@ export default function ContactUs() {
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-5">
+                  <form
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                    onSubmit={handleSubmit}
+                    className="mt-6 flex flex-col gap-5"
+                  >
+                    <input type="hidden" name="form-name" value="contact" />
                     {/* Name + Email row */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block font-['Manrope:SemiBold',sans-serif] font-semibold text-[#0c0c0c] text-[12px] leading-4 mb-2">
+                        <label htmlFor="contact-name" className="block font-['Manrope:SemiBold',sans-serif] font-semibold text-[#0c0c0c] text-[12px] leading-4 mb-2">
                           Full Name *
                         </label>
                         <input
+                          id="contact-name"
+                          name="name"
                           type="text"
+                          autoComplete="name"
                           required
                           placeholder="Your full name"
                           value={form.name}
@@ -204,11 +244,14 @@ export default function ContactUs() {
                         />
                       </div>
                       <div>
-                        <label className="block font-['Manrope:SemiBold',sans-serif] font-semibold text-[#0c0c0c] text-[12px] leading-4 mb-2">
+                        <label htmlFor="contact-email" className="block font-['Manrope:SemiBold',sans-serif] font-semibold text-[#0c0c0c] text-[12px] leading-4 mb-2">
                           Email Address *
                         </label>
                         <input
+                          id="contact-email"
+                          name="email"
                           type="email"
+                          autoComplete="email"
                           required
                           placeholder="your@email.com"
                           value={form.email}
@@ -220,10 +263,12 @@ export default function ContactUs() {
 
                     {/* Subject */}
                     <div>
-                      <label className="block font-['Manrope:SemiBold',sans-serif] font-semibold text-[#0c0c0c] text-[12px] leading-4 mb-2">
+                      <label htmlFor="contact-subject" className="block font-['Manrope:SemiBold',sans-serif] font-semibold text-[#0c0c0c] text-[12px] leading-4 mb-2">
                         Subject *
                       </label>
                       <select
+                        id="contact-subject"
+                        name="subject"
                         required
                         value={form.subject}
                         onChange={(e) => setForm((f) => ({ ...f, subject: e.target.value }))}
@@ -239,10 +284,12 @@ export default function ContactUs() {
 
                     {/* Message */}
                     <div>
-                      <label className="block font-['Manrope:SemiBold',sans-serif] font-semibold text-[#0c0c0c] text-[12px] leading-4 mb-2">
+                      <label htmlFor="contact-message" className="block font-['Manrope:SemiBold',sans-serif] font-semibold text-[#0c0c0c] text-[12px] leading-4 mb-2">
                         Message *
                       </label>
                       <textarea
+                        id="contact-message"
+                        name="message"
                         required
                         rows={6}
                         placeholder="Write your message here…"
@@ -252,11 +299,18 @@ export default function ContactUs() {
                       />
                     </div>
 
+                    {submitError && (
+                      <p role="alert" className="font-['Manrope:Regular',sans-serif] text-sm text-red-700 leading-[1.5]">
+                        {submitError}
+                      </p>
+                    )}
+
                     <button
                       type="submit"
+                      disabled={submitting}
                       className="w-full bg-[#f4b224] flex items-center justify-center gap-2 py-[14px] font-['Manrope:Bold',sans-serif] font-bold text-sm text-black hover:bg-[#e0a31e] transition-colors"
                     >
-                      Send Message
+                      {submitting ? "Sending..." : "Send Message"}
                       <SendIcon />
                     </button>
                   </form>

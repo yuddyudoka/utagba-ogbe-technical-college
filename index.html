@@ -14,9 +14,21 @@
 
     <body>
       
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        aria-hidden="true"
+        style="position:absolute;overflow:hidden;clip:rect(0 0 0 0);height:1px;width:1px;margin:-1px;padding:0;border:0"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <input name="name" />
+        <input name="email" type="email" />
+        <select name="subject"><option value=""></option></select>
+        <textarea name="message"></textarea>
+      </form>
       <div id="root"></div>
       <script type="module" src="/src/main.tsx"></script>
-      
+
     </body>
   </html>
-  

@@ -49,12 +49,12 @@ export default function Home() {
               <strong className="font-['Manrope:Bold',sans-serif] font-bold text-white">National Board for Technical Education</strong>.
             </p>
             <div className="mt-6 flex flex-col sm:flex-row gap-4">
-              <a href="#" className="inline-flex justify-center items-center gap-2 bg-[#f4b224] px-7 py-3.5 font-['Manrope:Bold',sans-serif] font-bold text-sm text-black hover:bg-yellow-400 transition-colors w-full sm:w-auto">
+              <Link to="/courses" className="inline-flex justify-center items-center gap-2 bg-[#f4b224] px-7 py-3.5 font-['Manrope:Bold',sans-serif] font-bold text-sm text-black hover:bg-yellow-400 transition-colors w-full sm:w-auto">
                 VIEW PROGRAMS <ArrowUpRight size={15} strokeWidth={2.5} />
-              </a>
-              <a href="#" className="inline-flex justify-center items-center border border-white/80 px-7 py-3.5 font-['Manrope:Bold',sans-serif] font-bold text-sm text-white hover:bg-white/10 transition-colors w-full sm:w-auto">
+              </Link>
+              <Link to="/admissions" className="inline-flex justify-center items-center border border-white/80 px-7 py-3.5 font-['Manrope:Bold',sans-serif] font-bold text-sm text-white hover:bg-white/10 transition-colors w-full sm:w-auto">
                 HOW TO APPLY
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -81,9 +81,9 @@ export default function Home() {
               <p className="mt-4 mb-8 font-['Manrope:Regular',sans-serif] text-[#666] text-sm leading-[1.625]">
                 Our mission is to create a quality learning environment that meets the education, training, and development expectations of students — equipping them for the labour market and self-employment.
               </p>
-              <a href="/about" className="inline-flex items-center gap-2 border border-black px-3.5 py-3 font-['Manrope:Bold',sans-serif] font-bold text-sm text-black hover:bg-black hover:text-white transition-colors">
+              <Link to="/about" className="inline-flex items-center gap-2 border border-black px-3.5 py-3 font-['Manrope:Bold',sans-serif] font-bold text-sm text-black hover:bg-black hover:text-white transition-colors">
                 LEARN MORE ABOUT US <ChevronRight size={14} strokeWidth={2} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -193,12 +193,12 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto shrink-0">
-              <a href="#" className="inline-flex justify-center items-center bg-black px-8 py-4 font-['Manrope:ExtraBold',sans-serif] font-extrabold text-sm text-white hover:bg-white hover:text-black transition-colors w-full sm:w-auto">
+              <Link to="/admissions" className="inline-flex justify-center items-center bg-black px-8 py-4 font-['Manrope:ExtraBold',sans-serif] font-extrabold text-sm text-white hover:bg-white hover:text-black transition-colors w-full sm:w-auto">
                 APPLY NOW
-              </a>
-              <a href="#" className="inline-flex justify-center items-center border-2 border-black px-7 py-3.5 font-['Manrope:Bold',sans-serif] font-bold text-sm text-black hover:bg-black/10 transition-colors w-full sm:w-auto">
+              </Link>
+              <Link to="/courses" className="inline-flex justify-center items-center border-2 border-black px-7 py-3.5 font-['Manrope:Bold',sans-serif] font-bold text-sm text-black hover:bg-black/10 transition-colors w-full sm:w-auto">
                 VIEW PROGRAMS
-              </a>
+              </Link>
             </div>
           </div>
         </div>

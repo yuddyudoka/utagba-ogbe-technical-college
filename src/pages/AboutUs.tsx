@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router";
 import svgPaths from "@/imports/AboutUs/svg-hnaspw36n6";
 import imgHero from "@/imports/AboutUs/78106b2658bf5182cf323d2b805b4b2520a8d4e9.png";
 import imgVision from "@/imports/AboutUs/577aec8b0d80f09397ee0109b8dfce02103623c2.png";
@@ -278,12 +279,12 @@ export default function AboutUs() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto shrink-0">
-              <a href="#" className="inline-flex justify-center items-center gap-2 bg-[#f4b224] px-7 py-3.5 font-['Manrope:Bold',sans-serif] font-bold text-sm text-black hover:bg-yellow-400 transition-colors w-full sm:w-auto">
+              <Link to="/courses" className="inline-flex justify-center items-center gap-2 bg-[#f4b224] px-7 py-3.5 font-['Manrope:Bold',sans-serif] font-bold text-sm text-black hover:bg-yellow-400 transition-colors w-full sm:w-auto">
                 View All Programs <ArrowRight size={13} strokeWidth={2} />
-              </a>
-              <a href="#" className="inline-flex justify-center items-center border border-black/20 px-7 py-3.5 font-['Manrope:SemiBold',sans-serif] font-semibold text-sm text-[#0c0c0c] hover:bg-black/5 transition-colors w-full sm:w-auto">
+              </Link>
+              <Link to="/admissions" className="inline-flex justify-center items-center border border-black/20 px-7 py-3.5 font-['Manrope:SemiBold',sans-serif] font-semibold text-sm text-[#0c0c0c] hover:bg-black/5 transition-colors w-full sm:w-auto">
                 Apply Now
-              </a>
+              </Link>
             </div>
           </div>
         </div>

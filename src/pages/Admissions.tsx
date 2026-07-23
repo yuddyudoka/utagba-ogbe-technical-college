@@ -1,5 +1,6 @@
 import svgPaths from "@/imports/Admissions/svg-pz736fpu46";
 import imgHero from "@/imports/Admissions/6a8f3b86589fd4bfa8c0530f1197bd1ffb973626.png";
+import { Link } from "react-router";
 
 // ── Step icon wrapper ────────────────────────────────────────
 function StepIcon({ children }: { children: React.ReactNode }) {
@@ -208,18 +209,18 @@ export default function Admissions() {
             Visit the admissions office at Utagba-Ogbe Technical College, Kwale — or contact us for guidance. Admission is open now for the 2025/2026 session.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-flex justify-center items-center bg-black px-8 py-4 font-['Manrope:Bold',sans-serif] font-bold text-sm text-white hover:bg-white hover:text-black transition-colors w-full sm:w-auto"
             >
               Contact Us
-            </a>
-            <a
-              href="/courses"
+            </Link>
+            <Link
+              to="/courses"
               className="inline-flex justify-center items-center border-2 border-black/30 px-8 py-4 font-['Manrope:SemiBold',sans-serif] font-semibold text-sm text-black hover:bg-black/10 transition-colors w-full sm:w-auto"
             >
               Explore Programmes
-            </a>
+            </Link>
           </div>
         </div>
       </section>
